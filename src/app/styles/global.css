@@ -1,21 +1,21 @@
 html,
 body,
 #root {
-	height: 100%;
-	margin: 0;
-	padding: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-	font-family: var(--font-family);
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 1.5;
-	color: var(--color-text-main);
-	background-color: var(--color-bg-page);
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-primary);
+    background-color: var(--bg-app);
 
-	scrollbar-color: var(--color-accent);
-	scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) var(--bg-surface);
+    scrollbar-width: thin;
 }
 
 a,
@@ -23,17 +23,17 @@ button,
 label,
 input,
 textarea {
-	color: inherit;
-	font-family: inherit;
-	outline: none;
-	text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+    outline: none;
+    text-decoration: none;
 }
 
 button {
-	cursor: pointer;
-	background: none;
-	border: none;
-	padding: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 h1,
@@ -43,24 +43,24 @@ h4,
 h5,
 h6,
 p {
-	margin: 0;
+    margin: 0;
 }
 
 .visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }

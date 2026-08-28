@@ -1,4 +1,8 @@
 :root {
+    /* Шрифты */
+    --font-family:
+        'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
     /* Базовые цвета фона */
     --bg-app: #090a0f;
     --bg-sidebar: #0e1017;

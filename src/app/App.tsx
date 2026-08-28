@@ -1,5 +1,7 @@
+import { AppRouter } from '@app/providers/AppRouter'
+
 function App() {
-    return <div>Hello</div>;
+    return <AppRouter />
 }
 
-export default App;
+export default App
