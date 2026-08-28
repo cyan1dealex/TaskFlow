@@ -1,0 +1,59 @@
+:root {
+    /* Базовые цвета фона */
+    --bg-app: #090a0f;
+    --bg-sidebar: #0e1017;
+    --bg-surface: #12151e;
+    --bg-surface-hover: #181c27;
+    --bg-surface-active: #1e2330;
+
+    /* Элементы форм */
+    --bg-input: #10131b;
+    --bg-input-hover: #141822;
+
+    /* Границы и разделители */
+    --border-subtle: #1c202d;
+    --border-default: #262b3d;
+    --border-hover: #373e56;
+    --border-focus: #e11d48;
+
+    /* Радиусы скругления */
+    --radius-xs: 4px;
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+
+    /* Типографика */
+    --text-primary: #f4f5f7;
+    --text-secondary: #9da4b7;
+    --text-muted: #5e667e;
+    --text-disabled: #3d4355;
+    --text-on-accent: #ffffff;
+
+    /* Акцентная палитра */
+    --color-primary: #e11d48;
+    --color-primary-hover: #be123c;
+    --color-primary-active: #9f1239;
+    --color-primary-subtle: rgba(225, 29, 72, 0.12);
+    --color-primary-subtle-border: rgba(225, 29, 72, 0.25);
+
+    /* Вторичные и нейтральные кнопки */
+    --bg-secondary: #1a1e2b;
+    --bg-secondary-hover: #222738;
+    --text-secondary-btn: #e2e5ec;
+
+    /* Статусы и приоритеты */
+    --status-urgent: #ef4444;
+    --status-high: #f97316;
+    --status-medium: #eab308;
+    --status-low: #3b82f6;
+    --status-done: #10b981;
+
+    /* Тени */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -4px rgba(0, 0, 0, 0.6);
+
+    /* Переходы */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
