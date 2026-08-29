@@ -1,13 +1,13 @@
 import React from 'react'
+import { useForm } from 'react-hook-form'
+import { supabase } from '@shared/api'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { RegisterFormData, registerSchema } from '@features/auth/model/register.schema'
+
 import { Input } from '@shared/ui/Input'
 import { Button } from '@shared/ui/Button'
-import { useForm } from 'react-hook-form'
-
-import { RegisterFormData, registerSchema } from '../model/register.schema'
-import { zodResolver } from '@hookform/resolvers/zod'
 
 import styles from './RegisterForm.module.css'
-import { supabase } from '@shared/api'
 
 export const RegisterForm = () => {
     const {

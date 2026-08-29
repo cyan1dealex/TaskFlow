@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
 import styles from './RegisterPage.module.css'
-import { RegisterForm } from '@features/Register'
+import { RegisterForm } from '@features/auth'
 
 export const RegisterPage = () => {
     return (

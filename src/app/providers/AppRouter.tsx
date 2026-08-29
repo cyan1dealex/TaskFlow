@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import { LoginPage } from '@pages/LoginPage'
-import { RegisterPage } from '@pages/RegisterPage'
+import { LoginPage } from '@pages/login-page'
+import { RegisterPage } from '@pages/register-page'
 
 export const AppRouter = () => {
     return (

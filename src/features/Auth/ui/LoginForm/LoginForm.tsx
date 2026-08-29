@@ -1,13 +1,13 @@
 import React from 'react'
-import { Input } from '@shared/ui/Input'
-import { Button } from '@shared/ui/Button'
 import { useForm } from 'react-hook-form'
-
-import { LoginFormData, loginSchema } from '../model/login.schema'
+import { supabase } from '@shared/api'
 import { zodResolver } from '@hookform/resolvers/zod'
 
+import { Input } from '@shared/ui/Input'
+import { Button } from '@shared/ui/Button'
+import { LoginFormData, loginSchema } from '@features/Auth/model/login.schema'
+
 import styles from './LoginForm.module.css'
-import { supabase } from '@shared/api'
 
 export const LoginForm = () => {
     const {
