@@ -1,11 +1,10 @@
-import React from 'react'
 import { useForm } from 'react-hook-form'
 import { supabase } from '@shared/api'
 import { zodResolver } from '@hookform/resolvers/zod'
 
 import { Input } from '@shared/ui/Input'
 import { Button } from '@shared/ui/Button'
-import { LoginFormData, loginSchema } from '@features/Auth/model/login.schema'
+import { LoginFormData, loginSchema } from '@features/auth/model/login.schema'
 
 import styles from './LoginForm.module.css'
 
