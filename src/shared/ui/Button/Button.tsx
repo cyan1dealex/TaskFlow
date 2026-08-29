@@ -33,7 +33,7 @@ export const Button: React.FC<ButtonProps> = (props) => {
             disabled={restProps.disabled || isLoading}
             {...restProps}
         >
-            {isLoading ? <span>'Загрузка...'</span> : children}
+            {isLoading ? <span>...</span> : children}
         </button>
     )
 }

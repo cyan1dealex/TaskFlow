@@ -1,4 +1,3 @@
-import React from 'react'
 import { useForm } from 'react-hook-form'
 import { supabase } from '@shared/api'
 import { zodResolver } from '@hookform/resolvers/zod'

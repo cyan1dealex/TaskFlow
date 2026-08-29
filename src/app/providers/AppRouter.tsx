@@ -2,8 +2,14 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { LoginPage } from '@pages/login-page'
 import { RegisterPage } from '@pages/register-page'
 import { ProtectedRoute } from './ProtectedRoute'
+import { LogoutButton } from '@features/auth'
 
-const DashboardPage = () => <div>Личный кабинет / Главная доска</div>
+const DashboardPage = () => (
+    <div>
+        Личный кабинет / Главная доска
+        <LogoutButton />
+    </div>
+)
 
 export const AppRouter = () => {
     return (

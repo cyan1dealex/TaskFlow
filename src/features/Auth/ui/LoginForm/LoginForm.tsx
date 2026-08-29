@@ -7,6 +7,7 @@ import { Button } from '@shared/ui/Button'
 import { LoginFormData, loginSchema } from '@features/auth/model/login.schema'
 
 import styles from './LoginForm.module.css'
+import { useNavigate } from 'react-router-dom'
 
 export const LoginForm = () => {
     const {
@@ -15,6 +16,8 @@ export const LoginForm = () => {
         setError,
         formState: { errors, isSubmitting },
     } = useForm<LoginFormData>({ resolver: zodResolver(loginSchema), mode: 'onTouched' })
+
+    const navigate = useNavigate()
 
     const onSubmit = async (formData: LoginFormData) => {
         const { email, password } = formData
@@ -33,6 +36,7 @@ export const LoginForm = () => {
         }
 
         console.log('Пользователь успешно залогинился:', data.user)
+        navigate('/app', { replace: true })
     }
 
     return (
