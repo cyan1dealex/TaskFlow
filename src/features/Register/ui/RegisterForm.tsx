@@ -7,23 +7,45 @@ import { RegisterFormData, registerSchema } from '../model/register.schema'
 import { zodResolver } from '@hookform/resolvers/zod'
 
 import styles from './RegisterForm.module.css'
+import { supabase } from '@shared/api'
 
 export const RegisterForm = () => {
     const {
         register,
         handleSubmit,
+        setError,
         formState: { errors, isSubmitting },
     } = useForm<RegisterFormData>({
         resolver: zodResolver(registerSchema),
         mode: 'onTouched',
     })
 
+    const onSubmit = async (formData: RegisterFormData) => {
+        const { email, password, username } = formData
+
+        const { data, error } = await supabase.auth.signUp({
+            email,
+            password,
+            options: {
+                data: {
+                    username,
+                },
+            },
+        })
+
+        if (error) {
+            setError('email', {
+                type: 'server',
+                message: error.message,
+            })
+            return
+        }
+
+        console.log('Пользователь успешно зарегистрирован:', data.user)
+    }
+
     return (
-        <form
-            className={styles.form}
-            onSubmit={handleSubmit((data) => console.log(data))}
-            noValidate
-        >
+        <form className={styles.form} onSubmit={handleSubmit(onSubmit)} noValidate>
             <Input
                 label="Логин"
                 placeholder="Username"

@@ -23,11 +23,12 @@
     padding: 0 12px;
     background-color: var(--bg-input);
     color: var(--text-primary);
+    caret-color: var(--text-primary);
     border: 1px solid var(--border-default);
     border-radius: var(--radius-sm);
     font-family: inherit;
     font-size: 14px;
-    line-height: 1;
+    line-height: 38px;
     outline: none;
     box-sizing: border-box;
     transition:
@@ -45,7 +46,7 @@
     border-color: var(--border-hover);
 }
 
-.input:focus-visible {
+.input:focus {
     border-color: var(--border-focus);
     box-shadow: 0 0 0 1px var(--border-focus);
 }
@@ -60,7 +61,7 @@
     border-color: var(--status-urgent);
 }
 
-.invalid:focus-visible {
+.invalid:focus {
     border-color: var(--status-urgent);
     box-shadow: 0 0 0 1px var(--status-urgent);
 }
@@ -70,6 +71,17 @@
     color: var(--status-urgent);
     line-height: 1.2;
     animation: fadeIn var(--transition-fast) ease-in-out;
+}
+
+/* Фикс автозаполнения браузера */
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px var(--bg-input) inset !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+    caret-color: var(--text-primary) !important;
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 @keyframes fadeIn {

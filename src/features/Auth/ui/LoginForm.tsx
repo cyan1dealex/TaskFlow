@@ -7,20 +7,37 @@ import { LoginFormData, loginSchema } from '../model/login.schema'
 import { zodResolver } from '@hookform/resolvers/zod'
 
 import styles from './LoginForm.module.css'
+import { supabase } from '@shared/api'
 
 export const LoginForm = () => {
     const {
         register,
         handleSubmit,
+        setError,
         formState: { errors, isSubmitting },
     } = useForm<LoginFormData>({ resolver: zodResolver(loginSchema), mode: 'onTouched' })
 
+    const onSubmit = async (formData: LoginFormData) => {
+        const { email, password } = formData
+
+        const { data, error } = await supabase.auth.signInWithPassword({
+            email,
+            password,
+        })
+
+        if (error) {
+            setError('email', {
+                type: 'server',
+                message: error.message,
+            })
+            return
+        }
+
+        console.log('Пользователь успешно залогинился:', data.user)
+    }
+
     return (
-        <form
-            className={styles.form}
-            onSubmit={handleSubmit((data) => console.log(data))}
-            noValidate
-        >
+        <form className={styles.form} onSubmit={handleSubmit(onSubmit)} noValidate>
             <Input
                 label="Email"
                 type="email"
