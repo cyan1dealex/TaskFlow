@@ -7,6 +7,7 @@ import { Input } from '@shared/ui/Input'
 import { Button } from '@shared/ui/Button'
 
 import styles from './RegisterForm.module.css'
+import { useNavigate } from 'react-router-dom'
 
 export const RegisterForm = () => {
     const {
@@ -18,6 +19,8 @@ export const RegisterForm = () => {
         resolver: zodResolver(registerSchema),
         mode: 'onTouched',
     })
+
+    const navigate = useNavigate()
 
     const onSubmit = async (formData: RegisterFormData) => {
         const { email, password, username } = formData
@@ -41,6 +44,7 @@ export const RegisterForm = () => {
         }
 
         console.log('Пользователь успешно зарегистрирован:', data.user)
+        navigate('/app', { replace: true })
     }
 
     return (

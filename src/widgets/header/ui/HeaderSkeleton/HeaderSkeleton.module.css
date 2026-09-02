@@ -1,0 +1,47 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    margin-left: -10px;
+    gap: 16px;
+    background-color: var(--color-light-secondary);
+    animation: pulse 1.5 infinite ease-in-out;
+}
+
+.breadcrumbs span {
+    padding: 6px 10px;
+    border-radius: var(--border-radius-medium);
+    transition-duration: var(--transition-duration);
+}
+
+.isActive {
+    color: var(--color-light);
+    background-color: var(--color-gray-light);
+}
+
+.breadcrumbs span:hover {
+    color: var(--color-light);
+    background-color: var(--color-gray-light);
+    cursor: pointer;
+}
+
+.breadcrumbs :not(span) {
+    pointer-events: none;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}

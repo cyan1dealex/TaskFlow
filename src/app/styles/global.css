@@ -11,10 +11,10 @@ body {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
-    color: var(--text-primary);
-    background-color: var(--bg-app);
+    color: var(--color-light);
+    background-color: var(--color-dark);
 
-    scrollbar-color: var(--color-primary) var(--bg-surface);
+    scrollbar-color: var(--color-gray) var(--color-gray-light);
     scrollbar-width: thin;
 }
 

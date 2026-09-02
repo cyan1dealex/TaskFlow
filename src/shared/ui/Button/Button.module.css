@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     border: 1px solid transparent;
-    border-radius: var(--radius-sm);
+    border-radius: var(--border-radius-medium);
     font-family: inherit;
     font-weight: 500;
     line-height: 1;
@@ -11,82 +11,82 @@
     white-space: nowrap;
     cursor: pointer;
     user-select: none;
-    transition:
-        background-color var(--transition-fast),
-        border-color var(--transition-fast),
-        color var(--transition-fast),
-        opacity var(--transition-fast);
+    transition-duration: var(--transition-duration);
 }
 
-.button:focus-visible {
+/* .button:focus-visible {
     outline: 2px solid var(--border-focus);
     outline-offset: 2px;
-}
+} */
 
 .button:disabled {
-    opacity: 0.5;
+    opacity: 0.4;
     cursor: not-allowed;
     pointer-events: none;
 }
 
 .sm {
-    height: 32px;
+    height: 30px;
     padding: 0 10px;
-    font-size: 13px;
+    font-size: 12px;
     gap: 6px;
 }
 
 .md {
-    height: 38px;
+    height: 36px;
     padding: 0 14px;
-    font-size: 14px;
+    font-size: 13px;
     gap: 8px;
 }
 
 .lg {
-    height: 44px;
+    height: 42px;
     padding: 0 18px;
-    font-size: 15px;
+    font-size: 14px;
     gap: 10px;
 }
 
 .primary {
-    background-color: var(--color-primary);
-    color: var(--text-on-accent);
+    background-color: var(--color-gray-light);
+    border-color: var(--color-gray-light-secondary);
 }
 
 .primary:hover {
-    background-color: var(--color-primary-hover);
+    border-color: var(--color-light);
 }
 
 .primary:active {
-    background-color: var(--color-primary-active);
+    background-color: var(--color-light);
 }
 
+/* Secondary — Серый графитовый блок (Filter/Sort стиль) */
 .secondary {
-    background-color: var(--bg-secondary);
-    color: var(--text-secondary-btn);
+    background-color: var(--bg-surface);
+    color: var(--text-secondary);
     border-color: var(--border-subtle);
 }
 
 .secondary:hover {
-    background-color: var(--bg-secondary-hover);
-    border-color: var(--border-default);
+    background-color: var(--bg-surface-hover);
+    color: var(--text-primary);
+    border-color: var(--border-card);
 }
 
 .secondary:active {
     background-color: var(--bg-surface-active);
 }
 
+/* Outline / Ghost */
 .outline {
     background-color: transparent;
-    color: var(--text-primary);
-    border-color: var(--border-default);
+    color: var(--text-secondary);
+    border-color: var(--border-subtle);
 }
 
 .outline:hover {
-    background-color: var(--bg-surface-hover);
-    border-color: var(--border-hover);
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    border-color: var(--border-default);
 }
 
 .outline:active {

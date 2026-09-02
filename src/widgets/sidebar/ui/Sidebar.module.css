@@ -1,0 +1,177 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 100%;
+    background-color: transparent;
+    padding-inline: 12px;
+    flex-shrink: 0;
+    transition-duration: var(--transition-duration);
+}
+
+.sidebarCollapsed {
+    width: 72px;
+    padding-top: 10px;
+}
+
+/* ==========================================================================
+   ПРОФИЛЬ ПОЛЬЗОВАТЕЛЯ
+   ========================================================================== */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 8px;
+    margin-bottom: 16px;
+    border-radius: var(--border-radius-medium);
+    background-color: var(--color-gray);
+    border: var(--border);
+    overflow: hidden;
+    transition-duration: var(--transition-duration);
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: var(--border-radius-small);
+    background-color: var(--color-gray-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 1;
+    overflow: hidden;
+}
+
+.username {
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.email {
+    font-size: 11px;
+    color: var(--color-light-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* В свернутом состоянии скрываем текст профиля и кнопку выхода */
+.sidebarCollapsed .userInfo,
+.sidebarCollapsed .profile > button {
+    display: none;
+}
+
+.sidebarCollapsed .profile {
+    /* padding: 6px; */
+    justify-content: center;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.sidebarCollapsed .navLink {
+    justify-content: center;
+}
+
+/* ==========================================================================
+   НАВИГАЦИЯ
+   ========================================================================== */
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: var(--border-radius-medium);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-light-secondary);
+    text-decoration: none;
+    transition-duration: var(--transition-duration);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.navLink:hover {
+    background-color: var(--color-gray-light);
+    color: var(--text-primary);
+}
+
+.navLinkActive {
+    color: var(--color-light);
+    background-color: var(--color-gray-light);
+    border: var(--border);
+    border-color: var(--color-light-secondary);
+}
+
+.navIcon {
+    font-size: 15px;
+    min-width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navLabel {
+    transition: opacity var(--transition-fast);
+}
+
+/* ==========================================================================
+   НИЖНИЙ БЛОК ДЕЙСТВИЙ И КНОПКА СВОРАЧИВАНИЯ
+   ========================================================================== */
+.bottomSection {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.collapseButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 36px;
+    background: transparent;
+    border: var(--border);
+    border-radius: var(--border-radius-medium);
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 13px;
+    transition-duration: var(--transition-duration);
+}
+
+.collapseButton:hover {
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    border-color: var(--border-card);
+}
+
+.collapseIcon {
+    display: inline-block;
+    font-size: 12px;
+    transition: transform 0.25s ease;
+}
+
+.collapseIconRotated {
+    transform: rotate(180deg);
+}
